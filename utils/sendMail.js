@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
   secure: true,
   debug: true,
   auth: {
-    user: "ibenemeikenna96@gmail.com",
-    pass: "urvf bppa wbgo bmsm",
+    user: process.env.EMAIL_USER, // Read email from environment
+    pass: process.env.EMAIL_PASS, // Read password from environment
   },
 });
 
@@ -90,7 +90,7 @@ const sendOTP = async (email, otp) => {
       //     path: logoPath,
       //     cid: "logo", // Content ID of the image
       //   },
-     // ],
+      // ],
     });
 
     console.log("Message sent: %s", info.messageId);

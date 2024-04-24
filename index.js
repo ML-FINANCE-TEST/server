@@ -13,14 +13,13 @@ const stats = require("./router/Coins/stats");
 const olhc = require("./router/Coins/olhc");
 const specific = require("./router/Coins/specificCoins");
 const allcoins = require("./router/Coins/allCoins");
+require('dotenv').config();
 
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
-const uri =
-  "mongodb+srv://ikennaibenemee:ZmVDLY6yOBncDB9E@ml.9abwozd.mongodb.net/?retryWrites=true&w=majority&appName=ml";
-
+const uri = process.env.MONGODB_URI; 
 app.use("/api/users", userRouter); // Mount the userRouter at /api/users
 app.use("/api/coins", coins); // Mount the userRouter at /api/users
 app.use("/api/stats", stats); // Mount the userRouter at /api/users

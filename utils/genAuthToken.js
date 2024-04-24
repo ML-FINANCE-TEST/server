@@ -1,5 +1,5 @@
 
-const jwtSecretKey = 'machineLearning';
+const jwtSecretKey = process.env.JWT_SECRET_KEY;
 
 const jwt = require("jsonwebtoken");
 const genAuthToken = (user) => {
