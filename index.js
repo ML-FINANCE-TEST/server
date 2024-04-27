@@ -16,6 +16,7 @@ const allcoins = require("./router/Coins/allCoins");
 const fraud = require("./router/Fraud/Fraud");
 const fear = require("./router/Fear/fear");
 const sentiments = require("./router/Sentiments/Sentiments");
+const validate = require("./router/Fraud/validate");
 
 require("dotenv").config();
 
@@ -33,10 +34,13 @@ app.use("/api/allcoins", allcoins); // Mount the userRouter at /api/users
 app.use("/api/fraud", fraud); // Mount the userRouter at /api/users
 app.use("/api/", fear); // Mount the userRouter at /api/users
 app.use("/api/", sentiments); // Mount the userRouter at /api/users
+app.use("/api/validater", validate); // Mount the userRouter at /api/users
+
 
 app.get("/", (req, res) => {
   res.send("Hello, World people todayyyy!");
 });
+
 server.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}`);
 });
