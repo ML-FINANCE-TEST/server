@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const uri = process.env.MONGODB_URI;
-app.use("/api/users", userRouter); // Mount the userRouter at /api/users
+//app.use("/api/users", userRouter); // Mount the userRouter at /api/users
 app.use("/api/coins", coins); // Mount the userRouter at /api/users
 app.use("/api/stats", stats); // Mount the userRouter at /api/users
 app.use("/api/olhc", olhc); // Mount the userRouter at /api/users

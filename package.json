@@ -11,9 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow/tfjs": "^4.18.0",
+    "@tensorflow/tfjs-node": "^4.18.0",
     "axios": "^1.6.8",
     "backblaze-b2": "^1.7.0",
-    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "crypto-address-validators": "^1.0.3",
